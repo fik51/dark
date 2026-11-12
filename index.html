@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord.gg/EHZTXduFm2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.discordapp.com/attachments/1568386440449228810/1570541468903546941/image.png?ex=6af77839&is=6af626b9&hm=ad47619d1ecbf5ebb939eb6a1bff19fdde4aff3480c39ccdeb358933514b111f&') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #030303;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 750px; 
+            height: auto;
+            border: 2px solid #000000; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgb(126, 6, 6); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #b91212; 
+            text-shadow: 0px 0px 8px #a31010, 0px 0px 15px #000000, 0px 0px 25px #000000; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em; 
+            color: #af0f0f; 
+            text-shadow: 0px 0px 8px #000000, 0px 0px 15px #000000, 0px 0px 25px #000000; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="https://cdn.discordapp.com/attachments/1568386440449228810/1570537596382351510/image.png?ex=6af7749e&is=6af6231e&hm=2d1742dcde0c68d473101278e9b60bc0c5efc7e7b8d29fdb62a05b50fa6b2769&" alt="Discord Image">
+    </div>
+    <audio autoplay loop>
+        <source src="aa.mp3" type="audio/mpeg">
+    </audio>
+     <div class="text"> welcome to adolf  </div>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text"> :
+         Adolf : https://discord.gg/adf</div>
+
+    <script>
+         fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            delete data.readme;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
